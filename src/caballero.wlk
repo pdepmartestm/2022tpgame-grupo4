@@ -3,7 +3,7 @@ import wollok.game.*
 
 object caballero {
 	
-	var image = "assets/cab01.png"
+	//var image = "assets/cab01.png"
 	var position = game.origin()
 	var monedas =0
 	
@@ -29,12 +29,12 @@ object caballero {
 	
 	method subir(){
 		
-		position = position.up(1)
+		position = position.up(2)
 		
 	}
 	
 	method caer(){
-		position = position.down(1)
+		position = position.down(2)
 		
 	}
 	
@@ -47,10 +47,16 @@ object caballero {
 		
 	}
 	
-	method image() = image
+	method image(){
+		return if (self.estaVivo())"assets/cab01.png" else "assets/muerto.png"
+		
+	}
 	
 	
-	
+	method estaVivo(){
+		return 1==1
+		
+	}
 	
 	
 }
