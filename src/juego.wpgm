@@ -1,5 +1,5 @@
 import wollok.game.*
-import caballero.*
+import juego.*
 
 program juego {
 
